@@ -1,0 +1,6 @@
+myenv
+user_data.db
+__pycache__/
+*.pyc
+.env
+faiss_index
