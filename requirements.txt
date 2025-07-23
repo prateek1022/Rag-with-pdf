@@ -7,3 +7,4 @@ faiss-cpu
 tiktoken
 streamlit-authenticator
 nest_asyncio
+langchain-google-genai
