@@ -27,9 +27,9 @@ This project is a multi-user Streamlit application that allows users to upload a
 *(Space for you to add screenshots)*
 
 ### Login Page
-[Login Page](./screenshots/screenshot-1.png)
+[Login Page](./screenshots/screenshot-1.png)   [Login Page](./screenshots/screenshot-6.png)
 
-[Login Page](./screenshots/screenshot-6.png)
+
 
 ### Main Chat Interface
 [Chat Interface](./screenshots/screenshot-3.png)
