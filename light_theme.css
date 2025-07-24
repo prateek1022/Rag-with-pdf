@@ -1,0 +1,219 @@
+/* Base Colors */
+:root {
+    --bg-color: #FAFAFA;
+    --text-color: #202124;
+    --sidebar-bg: #F5F5F5;
+    --accent-red: #FF4136;
+    --accent-blue: #0074D9;
+    --border-color: #DADCE0;
+    --input-bg: #EEEEEE;
+    --msg-user-bg: #E6F0FF;
+    --msg-bot-bg: #F1F3F4;
+    --code-bg: #F1F3F4;
+    --inline-code-bg: #E8EAED;
+    --inline-code-border: #DADCE0;
+    --expander-header-bg: #E8EAED;
+    --expander-header-hover-bg: #DADCE0;
+    --button-text-color: white;
+    --process-logout-button-hover-bg: #0056b3;
+    --download-button-hover-bg: #cc342b;
+    --input-focus-bg: white;
+}
+
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+/* Ensure Streamlit's main container also gets the background */
+ div[data-testid="stAppViewContainer"] > section {
+    background-color: var(--bg-color);
+}
+
+
+/* Main container adjustments */
+.main .block-container {
+    padding-top: 2rem; padding-bottom: 2rem;
+    padding-left: 3rem; padding-right: 3rem;
+}
+
+/* Main content area headers */
+[data-testid="stAppViewContainer"] h1,
+[data-testid="stAppViewContainer"] h2,
+[data-testid="stAppViewContainer"] h3,
+[data-testid="stAppViewContainer"] h4,
+[data-testid="stAppViewContainer"] h5,
+[data-testid="stAppViewContainer"] h6,
+[data-testid="stAppViewContainer"] p {
+    color: var(--text-color) !important;
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    background-color: var(--sidebar-bg);
+    padding: 1rem;
+    line-height: 1.4;
+    border-right: 1px solid var(--border-color);
+}
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] h5,
+[data-testid="stSidebar"] label, /* Input labels */
+[data-testid="stSidebar"] .stMarkdown /* General markdown text */
+ {
+    color: var(--text-color);
+}
+[data-testid="stSidebar"] h1 { margin-top: 0; margin-bottom: 0.5rem; font-weight: 600; }
+[data-testid="stSidebar"] h3 { margin-top: 1rem; margin-bottom: 0.3rem; font-weight: 600; }
+[data-testid="stSidebar"] h5 { margin-top: 0.6rem; margin-bottom: 0.3rem; font-weight: 600; }
+
+/* Reduce spacing around widgets */
+[data-testid="stSidebar"] [data-testid="stTextInput"],
+[data-testid="stSidebar"] [data-testid="stFileUploader"],
+[data-testid="stSidebar"] [data-testid="stButton"],
+[data-testid="stSidebar"] [data-testid="stDownloadButton"] {
+    margin-bottom: 0.6rem;
+}
+
+/* Sidebar Buttons - Default (Clear Chat, Reset) */
+[data-testid="stSidebar"] .stButton>button:not(:contains("Process")):not(:contains("Logout")):not(:contains("Download")) {
+     border-radius: 5px; border: 1px solid var(--accent-red);
+     color: var(--accent-red); background-color: transparent;
+     transition: all 0.2s ease-in-out; width: 100%; margin-bottom: 0.4rem; padding: 8px 0;
+}
+[data-testid="stSidebar"] .stButton>button:not(:contains("Process")):not(:contains("Logout")):not(:contains("Download")):hover {
+     border-color: var(--accent-red); color: white;
+     background-color: var(--accent-red);
+}
+
+/* Special styling for Process/Logout buttons (Blue) */
+[data-testid="stSidebar"] .stButton button:contains("Process"),
+[data-testid="stSidebar"] .stButton button:contains("Logout") {
+    background-color: var(--accent-blue); color: var(--button-text-color); border: none; border-radius: 5px;
+    width: 100%; margin-bottom: 0.4rem; transition: background-color 0.2s ease-in-out; padding: 8px 0;
+}
+ [data-testid="stSidebar"] .stButton button:contains("Process"):hover,
+ [data-testid="stSidebar"] .stButton button:contains("Logout"):hover {
+    background-color: var(--process-logout-button-hover-bg);
+}
+
+/* Download button styling (Red) */
+[data-testid="stSidebar"] [data-testid="stDownloadButton"] button {
+     background-color: var(--accent-red); color: var(--button-text-color); border: none; border-radius: 5px;
+     font-weight: 500; transition: background-color 0.2s ease-in-out;
+     width: 100%; margin-bottom: 0.4rem; padding: 8px 0;
+}
+[data-testid="stSidebar"] [data-testid="stDownloadButton"] button:hover {
+     background-color: var(--download-button-hover-bg); color: var(--button-text-color);
+}
+
+/* Chat message styling */
+.chat-message {
+    padding: 1rem 1.25rem; border-radius: 6px; margin-bottom: 1rem;
+    display: flex; align-items: flex-start;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: background-color 0.3s ease;
+    border-left: 4px solid transparent;
+}
+.chat-message.user { background-color: var(--msg-user-bg); border-left-color: var(--accent-blue); }
+.chat-message.bot { background-color: var(--msg-bot-bg); border-left-color: var(--accent-red); }
+.chat-message .avatar {
+    width: 38px; height: 38px; margin-right: 0.75rem; flex-shrink: 0;
+    border-radius: 50%; overflow: hidden; border: 1px solid var(--border-color);
+}
+.chat-message .avatar img { width: 100%; height: 100%; object-fit: cover; }
+.chat-message .message {
+    width: 100%; padding: 0; color: var(--text-color); font-size: 0.95rem; line-height: 1.6;
+}
+.chat-message .message p, .chat-message .message li, .chat-message .message h1, .chat-message .message h2, .chat-message .message h3, .chat-message .message h4, .chat-message .message h5, .chat-message .message h6 {
+     color: var(--text-color) !important;
+}
+.chat-message .message pre {
+    background-color: var(--code-bg); padding: 0.8rem; border-radius: 4px;
+    overflow-x: auto; border: 1px solid var(--border-color);
+}
+.chat-message .message code { /* Code within pre */
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace; font-size: 0.9rem;
+    color: var(--text-color); background-color: transparent; padding: 0.1em 0.3em;
+}
+.chat-message .message p code { /* Inline code */
+     background-color: var(--inline-code-bg);
+     border-radius: 3px; padding: 0.2em 0.4em; color: var(--text-color); border: 1px solid var(--inline-code-border);
+}
+
+/* Input fields styling */
+.stTextInput input, .stTextArea textarea, .stChatInput input {
+    border-radius: 4px; border: 1px solid var(--border-color); padding: 10px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+/* Placeholder text color */
+.stTextInput input::placeholder, .stTextArea textarea::placeholder, .stChatInput input::placeholder {
+    color: #666666;
+}
+.stTextInput input:focus, .stTextArea textarea:focus, .stChatInput input:focus {
+    border-color: var(--accent-blue); /* Blue focus */
+    box-shadow: 0 0 0 2px rgba(0, 116, 217, 0.25);
+    background-color: var(--input-focus-bg);
+}
+
+/* Expander styling */
+[data-testid="stSidebar"] .stExpander {
+    border: 1px solid var(--border-color); border-radius: 5px; margin-top: 0.75rem;
+    margin-bottom: 0.5rem; background-color: var(--input-bg);
+}
+[data-testid="stSidebar"] .stExpander header {
+    background-color: var(--expander-header-bg); padding: 0.5rem 1rem; border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid var(--border-color); font-weight: 500; color: var(--text-color);
+}
+.stExpander header:hover { background-color: var(--expander-header-hover-bg); }
+[data-testid="stSidebar"] .stExpander header p {
+    color: var(--text-color);
+}
+.stExpander div[data-testid="stExpanderDetails"] { padding: 1rem; background-color: var(--input-bg); }
+
+/* Divider styling */
+[data-testid="stSidebar"] hr {
+    margin-top: 0.75rem; margin-bottom: 0.75rem; border-top: 1px solid var(--border-color);
+}
+/* Status messages */
+[data-testid="stSidebar"] [data-testid="stInfo"],
+[data-testid="stSidebar"] [data-testid="stWarning"],
+[data-testid="stSidebar"] [data-testid="stSuccess"],
+[data-testid="stSidebar"] [data-testid="stError"] {
+    margin-bottom: 0.5rem; border-radius: 4px; color: var(--text-color);
+}
+ [data-testid="stSidebar"] [data-testid="stInfo"] { background-color: rgba(0, 116, 217, 0.1); border: 1px solid var(--accent-blue); }
+ [data-testid="stSidebar"] [data-testid="stWarning"] { background-color: rgba(255, 133, 27, 0.1); border: 1px solid #FF851B; } /* Orange warning */
+ [data-testid="stSidebar"] [data-testid="stSuccess"] { background-color: rgba(46, 204, 64, 0.1); border: 1px solid #2ECC40; } /* Green success */
+ [data-testid="stSidebar"] [data-testid="stError"] { background-color: rgba(255, 65, 54, 0.1); border: 1px solid var(--accent-red); }
+
+
+/* Login Page Specific Styling */
+.login-container {
+    max-width: 450px; margin: 5rem auto; padding: 2.5rem;
+    background-color: var(--sidebar-bg); border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.07); border: 1px solid var(--border-color);
+}
+.login-container h2 {
+    color: var(--text-color); text-align: center; margin-bottom: 2rem; font-weight: 600;
+}
+.login-container label { color: var(--text-color); }
+.login-container .stButton>button {
+     background-color: var(--accent-blue); color: var(--button-text-color); border: none;
+     border-radius: 4px; width: 100%; margin-top: 1.5rem; padding: 10px 0;
+     font-weight: 500; transition: background-color 0.2s ease-in-out;
+}
+.login-container .stButton>button:hover {
+     background-color: var(--accent-red); /* Red hover */
+}
+/* Style for processed files list */
+.processed-files-list {
+    font-size: 0.9em; margin-top: 0.5rem; max-height: 150px;
+    overflow-y: auto; background-color: var(--input-bg);
+    padding: 0.5rem 0.75rem; border-radius: 4px; border: 1px solid var(--border-color);
+}
+.processed-files-list ul { list-style-type: none; padding-left: 0; margin-bottom: 0; }
+ .processed-files-list li {
+    margin-bottom: 0.3rem; word-break: break-all; color: var(--text-color);
+}
