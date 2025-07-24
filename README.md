@@ -23,9 +23,6 @@ This project is a multi-user Streamlit application that allows users to upload a
 -   **Database:** SQLite for user and PDF metadata
 
 ## 📸 Screenshots
-
-*(Space for you to add screenshots)*
-
 ### Login Page
 [Login img1](./screenshots/screenshot-1.png) &nbsp; &nbsp; &nbsp; [Login img2](./screenshots/screenshot-6.png)
 
