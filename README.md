@@ -2,7 +2,7 @@
 
 This project is a multi-user Streamlit application that allows users to upload and chat with their PDF documents. It leverages a Retrieval-Augmented Generation (RAG) architecture with Google's Generative AI models to provide answers based on the content of the uploaded files.
 
-**Live App:** https://ragaspdf.streamlit.app/
+**Live App:** <a href="https://ragaspdf.streamlit.app/" target="_blank">https://ragaspdf.streamlit.app/</a>
 
 ## ✨ Features
 
@@ -15,11 +15,11 @@ This project is a multi-user Streamlit application that allows users to upload a
 
 ## 🚀 Tech Stack
 
--   **Frontend:** [Streamlit](https://streamlit.io/)
--   **Backend & Orchestration:** [LangChain](https://www.langchain.com/)
+-   **Frontend:** <a href="https://streamlit.io/" target="_blank">Streamlit</a>
+-   **Backend & Orchestration:** <a href="https://www.langchain.com/" target="_blank">LangChain</a>
 -   **Language Model:** Google Generative AI (Gemini)
 -   **Embeddings:** Google Generative AI (`embedding-001`)
--   **Vector Store:** [FAISS](https://github.com/facebookresearch/faiss) (Facebook AI Similarity Search)
+-   **Vector Store:** <a href="https://github.com/facebookresearch/faiss" target="_blank">FAISS</a> (Facebook AI Similarity Search)
 -   **Database:** SQLite for user and PDF metadata
 
 ## 📸 Screenshots
@@ -69,7 +69,7 @@ This project is a multi-user Streamlit application that allows users to upload a
     ```
 
 4.  **Get your Google API Key:**
-    *   Visit [Google AI for Developers](https://ai.google.dev/) to create your API key.
+    *   Visit <a href="https://ai.google.dev/" target="_blank">Google AI for Developers</a> to create your API key.
 
 5.  **Run the Streamlit app:**
     ```bash
@@ -78,5 +78,5 @@ This project is a multi-user Streamlit application that allows users to upload a
 
 ## 🔗 Connect with Me
 
--   **LinkedIn:** [Prateek Sharma](https://www.linkedin.com/in/prateek1022/)
--   **GitHub:** [@prateek1022](https://github.com/prateek1022)
+-   **LinkedIn:** <a href="https://www.linkedin.com/in/prateek1022/" target="_blank">Prateek Sharma</a>
+-   **GitHub:** <a href="https://github.com/prateek1022" target="_blank">@prateek1022</a>
