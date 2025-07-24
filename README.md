@@ -2,7 +2,7 @@
 
 This project is a multi-user Streamlit application that allows users to upload and chat with their PDF documents. It leverages a Retrieval-Augmented Generation (RAG) architecture with Google's Generative AI models to provide answers based on the content of the uploaded files.
 
-**Live App:** [Link to your deployed Streamlit App]
+**Live App:** https://ragaspdf.streamlit.app/
 
 ## ✨ Features
 
@@ -27,13 +27,19 @@ This project is a multi-user Streamlit application that allows users to upload a
 *(Space for you to add screenshots)*
 
 ### Login Page
-![Login Page](path/to/your/login_screenshot.png)
+![Login Page](./screenshots/screenshot-1.png)
+
+![Login Page](./screenshots/screenshot-6.png)
 
 ### Main Chat Interface
-![Chat Interface](path/to/your/chat_screenshot.png)
+![Chat Interface](./screenshots/screenshot-3.png)
+
+![Chat Interface](./screenshots/screenshot-2.png)
 
 ### PDF Management in Sidebar
-![Sidebar](path/to/your/sidebar_screenshot.png)
+![Sidebar](./screenshots/screenshot-4.png)
+
+![Sidebar](./screenshots/screenshot-5.png)
 
 ## 🛠️ How It Works
 
