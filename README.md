@@ -27,19 +27,19 @@ This project is a multi-user Streamlit application that allows users to upload a
 *(Space for you to add screenshots)*
 
 ### Login Page
-![Login Page](./screenshots/screenshot-1.png)
+[Login Page](./screenshots/screenshot-1.png)
 
-![Login Page](./screenshots/screenshot-6.png)
+[Login Page](./screenshots/screenshot-6.png)
 
 ### Main Chat Interface
-![Chat Interface](./screenshots/screenshot-3.png)
+[Chat Interface](./screenshots/screenshot-3.png)
 
-![Chat Interface](./screenshots/screenshot-2.png)
+[Chat Interface](./screenshots/screenshot-2.png)
 
 ### PDF Management in Sidebar
-![Sidebar](./screenshots/screenshot-4.png)
+[Sidebar](./screenshots/screenshot-4.png)
 
-![Sidebar](./screenshots/screenshot-5.png)
+[Sidebar](./screenshots/screenshot-5.png)
 
 ## 🛠️ How It Works
 
